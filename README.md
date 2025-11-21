@@ -6,19 +6,6 @@ Penelitian ini menggunakan dataset hasil kuesioner aktivitas mahasiswa per-jam p
 
 ---
 
-## Daftar Isi
-
-* Pendahuluan
-* Struktur Repository
-* Dataset
-* Metodologi Analisis
-* Hasil Utama
-* Cara Menjalankan Script R
-* Visualisasi
-* Tools & Library
-* Anggota Kelompok
-
----
 
 ## 📝 Pendahuluan
 
@@ -42,7 +29,6 @@ Markov-Mobilitas-Mahasiswa-ITERA-2025
 │
 ├── data
 │   ├── raw_data.csv
-│   └── dataset_clean.csv
 │
 ├── R
 │   └── Markov-Analysis.R
@@ -114,7 +100,7 @@ install.packages(c("dplyr", "stringr", "igraph", "expm"))
 
 ## Tools & Library
 
-| Tools/Library | Digunakan untuk               |
+| Tools/Library | Fungsi              |
 | ------------- | ----------------------------- |
 | RStudio       | Analisis dan komputasi Markov |
 | expm          | Perhitungan Pⁿ                |
@@ -132,7 +118,4 @@ install.packages(c("dplyr", "stringr", "igraph", "expm"))
 
 ---
 
-## Support
-
-Jika repositori ini bermanfaat, silakan berikan ** star** untuk mendukung pengembangan lebih lanjut.
 
