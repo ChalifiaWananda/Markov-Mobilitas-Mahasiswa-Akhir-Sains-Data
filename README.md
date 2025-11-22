@@ -25,7 +25,7 @@ Tujuan penelitian ini adalah:
 Markov-Mobilitas-Mahasiswa-ITERA-2025
 │
 ├── README.md
-├── laporan.pdf
+├── Laporan Kelompok-9 RA.pdf
 │
 ├── data
 │   ├── raw_data.csv
@@ -36,12 +36,13 @@ Markov-Mobilitas-Mahasiswa-ITERA-2025
 ├── gambar
 │   ├── diagram_alir.png
 │   ├── transition_graph.png
-|   ├──
 │   └── plot_frekuensi.png
 │
 └── output
     ├── matrix_transisi.png
     ├── distribusi_stasioner.png
+    ├── hasil_P2.png
+    ├── hasil_P3.png
     └── hasil_P10.png
 ```
 
