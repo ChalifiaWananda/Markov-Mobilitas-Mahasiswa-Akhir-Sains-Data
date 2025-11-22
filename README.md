@@ -28,22 +28,22 @@ Markov-Mobilitas-Mahasiswa-ITERA-2025
 ├── Laporan Kelompok 9-RA.pdf
 │
 ├── Data
-│   ├── raw_data.csv
+│ └── raw_data.csv
 │
 ├── R
-│   └── Rantai Markov.RMD
+│ └── Rantai Markov.RMD
 │
 ├── Gambar
-│   ├── diagram_alir.jpg
-│   ├── transition_graph.jpg
-│   └── plot_frekuensi.jpg
+│ ├── diagram_alir.jpg
+│ ├── transition_graph.jpg
+│ └── plot_frekuensi.jpg
 │
 └── Output
-    ├── matrix_transisi.jpg
-    ├── distribusi_stasioner.jpg
-    ├── hasil_P2.jpg
-    ├── hasil_P3.jpg
-    └── hasil_P10.jpg
+├── matrix_transisi.jpg
+├── distribusi_stasioner.jpg
+├── hasil_P2.jpg
+├── hasil_P3.jpg
+└── hasil_P10.jpg
 ```
 
 ---
@@ -61,42 +61,23 @@ Data yang digunakan berupa hasil kuesioner aktivitas mahasiswa per-jam, direpres
 
 Total Observasi: **5.445 data posisi (99 mahasiswa × 55 waktu observasi)**
 
+Berikut distribusi observasi per state:
+
+![Plot Frekuensi](Gambar/plot_frekuensi.jpg)
+
 ---
 
 ## Metodologi Analisis
+
+Proses analisis dilakukan dengan tahapan berikut:
+
+![Diagram Alir](Gambar/diagram_alir.jpg)
 
 * Penyusunan matriks transisi (N)
 * Konversi ke matriks probabilitas transisi (P)
 * Probabilitas multi-langkah (P², P³, P¹⁰)
 * Distribusi stasioner (Eigenvector)
 * Visualisasi graf transisi menggunakan edge weight
-
----
-
-## Hasil Utama (Steady-State Distribution)
-
-| Lokasi       | Proporsi   |
-| ------------ | ---------- |
-| Kelas        | **45.83%** |
-| Kosan        | **45.27%** |
-| Kantin       | **5.93%**  |
-| Perpustakaan | **2.96%**  |
-
-**Mahasiswa paling banyak berada di Kelas dan Kosan sebagai dua pusat aktivitas utama.**
-
----
-
-## Cara Menjalankan Script R
-
-```R
-source("R/Markov-Analysis.R")
-```
-
-Pastikan package berikut sudah terinstall:
-
-```R
-install.packages(c("dplyr", "stringr", "igraph", "expm"))
-```
 
 ---
 
@@ -108,6 +89,38 @@ install.packages(c("dplyr", "stringr", "igraph", "expm"))
 | expm          | Perhitungan Pⁿ                |
 | igraph        | Diagram transisi              |
 | dplyr         | Manipulasi data               |
+
+---
+
+## Cara Menjalankan Script R
+
+```R
+source("R/Rantai Markov.RMD")
+```
+
+Pastikan package berikut sudah terinstall:
+
+```R
+install.packages(c("dplyr", "stringr", "igraph", "expm"))
+```
+---
+
+## Hasil dan Visualisasi Model Markov
+### Graf Transisi Probabilitas
+Visualisasi hubungan perpindahan antar state setiap satu langkah:
+
+![Graf Transisi](Gambar/transition_graph.jpg)
+
+### Steady State Distribution
+Hasil perhitungan distribusi stasioner menunjukkan probabilitas jangka panjang:
+| State | Probabilitas |
+|--------|------------|
+| Kelas | 45.83% |
+| Kosan | 45.27% |
+| Kantin | 5.93% |
+| Perpustakaan | 2.96% |
+
+**Mahasiswa paling banyak berada di Kelas dan Kosan sebagai dua pusat aktivitas utama.**
 
 ---
 
