@@ -31,17 +31,18 @@ Markov-Mobilitas-Mahasiswa-ITERA-2025
 │   ├── raw_data.csv
 │
 ├── R
-│   └── Markov-Analysis.R
+│   └── code.r.RMD
 │
 ├── gambar
 │   ├── diagram_alir.png
 │   ├── transition_graph.png
+|   ├──
 │   └── plot_frekuensi.png
 │
 └── output
-    ├── matrix_transisi.xlsx
-    ├── distribusi_stasioner.csv
-    └── hasil_P10.csv
+    ├── matrix_transisi.png
+    ├── distribusi_stasioner.png
+    └── hasil_P10.png
 ```
 
 ---
